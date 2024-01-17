@@ -1,0 +1,11 @@
+{
+  "name": "36-node-markov",
+  "version": "1.0.0",
+  "description": "Node Markov exercise",
+  "main": "makeText.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Clarisse F",
+  "license": "ISC"
+}
