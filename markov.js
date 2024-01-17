@@ -43,6 +43,23 @@ class MarkovMachine {
   /** return random text from chains */
 
   makeText(numWords = 100) {
-    // TODO
+
+    // Pick a random key from the chains Map
+    let keys = Array.from(this.chains.keys());
+    let key = MarkovMachine.choice(keys);
+    let out = [];
+
+    // Generate random text from the chains Map
+    while (out.length < numWords && key !== null) {
+      out.push(key);
+      key = MarkovMachine.choice(this.chains.get(key));
+    }
+
+    // Return the generated text
+    return out.join(" ");
   }
 }
+
+module.exports = {
+  MarkovMachine
+};
